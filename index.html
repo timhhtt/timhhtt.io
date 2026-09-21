@@ -2,10 +2,61 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>我的静态网站</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>欢迎来到我的频道</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, sans-serif;
+        }
+        body {
+            min-height: 100vh;
+            background-color: #121212;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+        }
+        .box {
+            padding: 40px;
+            border-radius: 16px;
+            background-color: #1e1e1e;
+            box-shadow: 0 0 20px #2563eb40;
+        }
+        h1 {
+            font-size: 2.5rem;
+            color: #60a5fa;
+            margin-bottom: 16px;
+        }
+        p {
+            font-size: 1.1rem;
+            color: #cccccc;
+            margin-bottom: 24px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            background-color: #2563eb;            背景颜色: #2563eb;
+            color颜色: white白色;            颜色: 白色;
+            text-decoration: none;            文本装饰: 无;            文本装饰: 无;
+            border-radius: 999px;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background-color: #3b82f6;            背景颜色: #3b82f6;            背景颜色: #3b82f6;            背景颜色: #3b82f6;
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello GitHub Pages!</h1>
-    <p>网站部署成功啦</p>
+    <div class="box">
+        <h1>欢迎来到我的频道</h1>
+        <p>这里是我的个人静态网站，持续更新中...</p>
+        <a class="btn" href="#">探索更多</a>        探索更多</        探索更多
+    </div>
 </body>
 </html>
