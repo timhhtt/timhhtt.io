@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>项目 · TIMHHTT</title>
+<meta name="description" content="TIMHHTT 的项目作品集。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpolygon points='50,6 90,35 74,92 26,92 10,35' fill='%23130f2e' stroke='%23b47aff' stroke-width='6'/%3E%3Cpolygon points='50,26 68,48 50,78 32,48' fill='%23c792ea'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<canvas id="bgCanvas" aria-hidden="true"></canvas>
+<div class="page-bg" aria-hidden="true"></div>
+
+<main class="page-main">
+  <header class="section page-hero reveal">
+    <h1 class="page-title">项目</h1>
+    <p class="page-sub">每一件作品，都是一次时空扰动
+      <span class="page-sub-en">Projects · Signal From The Rift</span>
+    </p>
+    <div class="divider"></div>
+  </header>
+
+  <section class="section" style="padding-top:0">
+    <div class="project-grid" id="projectGrid"><!-- JS 渲染 --></div>
+  </section>
+</main>
+
+<script src="js/projects.js"></script>
+<script src="js/main.js"></script>
+<script>
+// 渲染项目卡片
+document.addEventListener("DOMContentLoaded", function () {
+  var grid = document.getElementById("projectGrid");
+  if (!grid) return;
+  grid.innerHTML = PROJECTS.map(function (p, i) {
+    var tags = (p.tags || []).map(function (t) { return '<span class="tag">' + t + "</span>"; }).join("");
+    var links = "";
+    if (p.github) links += '<a href="' + p.github + '" target="_blank" rel="noopener">GitHub</a>';
+    if (p.demo) links += '<a href="' + p.demo + '">在线演示</a>';
+    return (
+      '<article class="project-card" style="--stagger:' + (i * 0.12) + 's">' +
+        '<div class="project-top"><h2 class="project-name">' + p.name + "</h2>" +
+        '<span class="project-year">' + (p.year || "") + "</span></div>" +
+        '<p class="project-desc">' + p.desc + "</p>" +
+        (tags ? '<div class="project-tags">' + tags + "</div>" : "") +
+        (links ? '<div class="project-links">' + links + "</div>" : "") +
+      "</article>"
+    );
+  }).join("");
+});
+</script>
+</body>
+</html>
