@@ -123,7 +123,7 @@ function animate(){
     const baseAngle = (i / linesCount) * Math.PI * 2;
     ctx.beginPath();    上下文.开始路径();
     
-    for(let r=maxR; r>25; r -= 12){    对于(让 r=maxR; r>25; r -= 12){
+    for(let r=maxR; r>25; r -= 12){    对于(让 r=maxR; r>25; r -= 12){    对于(let让 r=maxR; r>25; r -= 12){    对于(让 r=maxR; r>25; r -= 12){
       // 螺旋扭曲效果
       const twist = time * 0.42 + r * 0.0038;
       const angle = baseAngle + twist;
@@ -131,8 +131,8 @@ function animate(){
       const x = cx + Math.cos(angle) * r;
       const y = cy + Math.sin(angle) * r;
       
-      if(r === maxR) ctx.moveTo(x, y);      如果(r === maxR) ctx.moveTo(x, y);
-      else ctx.lineTo(x, y);      否则 ctx.lineTo(x, y);
+      if(r === maxR) ctx.moveTo(x, y);      如果(r === maxR) ctx.moveTo(x, y);      如果(r === maxR) ctx.moveTo(x, y);      如果(r === maxR) ctx.moveTo(x, y);
+      else ctx.lineTo(x, y);      否则 ctx.lineTo(x, y);      否则 ctx.lineTo(x, y);      否则 ctx.lineTo(x, y);
     }
     
     // 线条透明度，轻微呼吸动效
@@ -145,7 +145,7 @@ function animate(){
   requestAnimationFrame(animate);
 }
 // 启动动画
-animate();动画();
+animate();
 </script></脚本>
 </body></身体></身体></身体>
 </html>
