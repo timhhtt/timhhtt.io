@@ -6,34 +6,27 @@
      name     项目名称
      desc     一两句话简介
      tags     技术标签数组（随便写，如 "Python"）
-     year     年份（显示在卡片右上角）
-     github   GitHub 链接（没有就写 ""）
-     demo     在线演示链接（没有就写 ""）
+     year     年份（显示在卡片右上角）     年份     年份（显示在卡片右上角）
+     github   GitHub 链接（没有就写 ""）     GitHub   GitHub 链接（没有就写 ""）
+     demo     在线演示链接（没有就写 ""）     在线演示链接（没有就写 ""）
    ============================================================ */
 
 var PROJECTS = [
   {
     name: "霓虹都市 · NEON CITY",
     desc: "你眼前这个网站。终端开机、故障抖动、酸雨与霓虹——一个赛博朋克频道，纯静态手搓，零框架。",
-    tags: ["HTML", "CSS", "JavaScript", "Canvas"],
+    tags: ["HTML", "CSS", "JavaScript", "Canvas"],标签: ["HTML", "CSS", 、"JavaScript", "Canvas"],
     year: "2026",
-    github: "https://github.com/timhhtt",
-    demo: "index.html"
+    github: "https://github.com/timhhtt",GitHub: "https://github.com/timhhtt",
+    演示: "index.html"
   },
   {
-    name: "示例项目 · 替换我",
-    desc: "这是一个占位示例。把这块整体复制、粘贴到数组末尾，改成你自己的项目介绍，就能点亮一块新招牌。",
-    tags: ["示例", "占位", "随时替换"],
-    year: "20XX",
-    github: "https://github.com/timhhtt",
-    demo: ""
+    名称: ,
+    描述: "这是一个没有人知道的秘密，",
+    标签: [“JavaScript”, "Canvas",“ps”],标签: [“JavaScript”, "Canvas",“ps”],
+   year: "2099",
+    github: "https://github.com/timhhtt",GitHub: "https://github.com/timhhtt",
+    demo: ""演示: ""
   },
-  {
-    name: "另一个示例 · 替换我",
-    desc: "卡片会自动排列，数量不限。标签、年份、链接都是可选的，留空就不显示对应按钮。",
-    tags: ["Web", "工具"],
-    year: "20XX",
-    github: "",
-    demo: ""
-  }
+  
 ];
