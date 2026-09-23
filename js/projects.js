@@ -16,17 +16,17 @@ var PROJECTS = [
     name: "霓虹都市 · NEON CITY",
     desc: "你眼前这个网站。终端开机、故障抖动、酸雨与霓虹——一个赛博朋克频道，纯静态手搓，零框架。",
     tags: ["HTML", "CSS", "JavaScript", "Canvas"],标签: ["HTML", "CSS", 、"JavaScript", "Canvas"],
-    year: "2026",
+    年份: "2026",
     github: "https://github.com/timhhtt",GitHub: "https://github.com/timhhtt",
-    演示: "index.html"
+    演示文件: "index.html"
   },
   {
-    名称: ,
-    描述: "这是一个没有人知道的秘密，",
-    标签: [“JavaScript”, "Canvas",“ps”],标签: [“JavaScript”, "Canvas",“ps”],
-   year: "2099",
+    name: "没有名字",
+    desc: "这是一个没有人知道的秘密,包括我自己。",
+    tags: ["HTML", "CSS", "JavaScript"],标签: ["HTML", "CSS", 、"JavaScript"],
+    年份: "2099",
     github: "https://github.com/timhhtt",GitHub: "https://github.com/timhhtt",
-    demo: ""演示: ""
-  },
+    
+  }
   
 ];
