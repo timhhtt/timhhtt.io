@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>项目 · TIMHHTT</title>
-<meta name="description" content="TIMHHTT 的项目作品集。">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpolygon points='50,6 90,35 74,92 26,92 10,35' fill='%23130f2e' stroke='%23b47aff' stroke-width='6'/%3E%3Cpolygon points='50,26 68,48 50,78 32,48' fill='%23c792ea'/%3E%3C/svg%3E">
+<meta name="description" content="TIMHHTT 的项目库。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect x='8' y='8' width='84' height='84' fill='%2307040e' stroke='%2300f0ff' stroke-width='5'/%3E%3Ctext x='50' y='68' font-size='52' text-anchor='middle' fill='%23ff2d95' font-family='monospace' font-weight='bold'%3ET%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -15,23 +15,21 @@
 
 <main class="page-main">
   <header class="section page-hero reveal">
-    <h1 class="page-title">项目</h1>
-    <p class="page-sub">每一件作品，都是一次时空扰动
-      <span class="page-sub-en">Projects · Signal From The Rift</span>
-    </p>
-    <div class="divider"></div>
+    <p class="page-kicker">// PROJECT VAULT · 已接入信号</p>
+    <h1 class="page-title">项目<span class="stroke">仓库</span></h1>
+    <p class="page-sub">每一个项目，都是这座城里亮起的一块招牌。</p>
+    <div class="divider-glow"></div>
   </header>
 
-  <section class="section" style="padding-top:0">
+  <section class="section" style="padding-top:0; padding-bottom:4rem">
     <div class="project-grid" id="projectGrid"><!-- JS 渲染 --></div>
   </section>
 </main>
 
 <script src="js/projects.js"></script>
-<script src="js/main.js"></script>
 <script>
-// 渲染项目卡片
-document.addEventListener("DOMContentLoaded", function () {
+// 渲染项目卡片（立即执行，确保 main.js 的入场观察能捕获到元素）
+(function () {
   var grid = document.getElementById("projectGrid");
   if (!grid) return;
   grid.innerHTML = PROJECTS.map(function (p, i) {
@@ -40,7 +38,8 @@ document.addEventListener("DOMContentLoaded", function () {
     if (p.github) links += '<a href="' + p.github + '" target="_blank" rel="noopener">GitHub</a>';
     if (p.demo) links += '<a href="' + p.demo + '">在线演示</a>';
     return (
-      '<article class="project-card" style="--stagger:' + (i * 0.12) + 's">' +
+      '<article class="project-card reveal" style="--stagger:' + (i * 0.1) + 's">' +
+        '<span class="project-idx">SIGNAL.0' + (i + 1) + "</span>" +
         '<div class="project-top"><h2 class="project-name">' + p.name + "</h2>" +
         '<span class="project-year">' + (p.year || "") + "</span></div>" +
         '<p class="project-desc">' + p.desc + "</p>" +
@@ -49,7 +48,8 @@ document.addEventListener("DOMContentLoaded", function () {
       "</article>"
     );
   }).join("");
-});
+})();
 </script>
+<script src="js/main.js"></script>
 </body>
 </html>

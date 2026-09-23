@@ -3,28 +3,59 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TIMHHTT · 暗物质裂隙</title>
-<meta name="description" content="TIMHHTT 的个人宇宙 —— 暗物质裂隙。项目作品集与灵感画廊。">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpolygon points='50,6 90,35 74,92 26,92 10,35' fill='%23130f2e' stroke='%23b47aff' stroke-width='6'/%3E%3Cpolygon points='50,26 68,48 50,78 32,48' fill='%23c792ea'/%3E%3C/svg%3E">
+<title>TIMHHTT · NEON CITY</title>
+<meta name="description" content="TIMHHTT 的赛博朋克个人站 —— 霓虹都市，雨夜接入。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect x='8' y='8' width='84' height='84' fill='%2307040e' stroke='%2300f0ff' stroke-width='5'/%3E%3Ctext x='50' y='68' font-size='52' text-anchor='middle' fill='%23ff2d95' font-family='monospace' font-weight='bold'%3ET%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+<!-- 终端开机层 -->
+<div id="boot" aria-hidden="true">
+  <div class="boot-inner"></div>
+  <div class="boot-skip">跳过 ▸▸</div>
+</div>
+
 <canvas id="bgCanvas" aria-hidden="true"></canvas>
-<canvas id="fxCanvas" aria-hidden="true"></canvas>
 <div class="page-bg" aria-hidden="true"></div>
 
-<main class="page-main" data-sidenav="on">
+<main class="page-main">
   <section class="hero">
     <div class="hero-bg" aria-hidden="true"></div>
-    <div class="shard-layer" aria-hidden="true"></div>
+    <div class="rain" aria-hidden="true"></div>
+
+    <div class="hud-corners" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+
+    <div class="hud-side left" aria-hidden="true">
+      城市网格 <span class="v">已接入</span><br>
+      信号强度 <span class="v">█████░ 92%</span><br>
+      天气 <span class="p">酸雨 67%</span><br>
+      能见度 <span class="v">4.2 KM</span><br>
+      霓虹指数 <span class="p">爆表</span>
+    </div>
+
+    <div class="hud-side right" aria-hidden="true">
+      坐标 <span class="v">N.未公开</span><br>
+      身份 <span class="v">TIMHHTT</span><br>
+      权限 <span class="p">ROOT</span><br>
+      频道状态 <span class="v">广播中</span><br>
+      心跳 <span class="v">72 BPM</span>
+    </div>
 
     <div class="hero-content">
-      <h1 class="hero-title">TIMHHTT</h1>
-      <p class="hero-sub-cn">欢迎来到我的频道</p>
-      <p class="hero-sub-en">Dark Matter Rift · Beyond The Event Horizon</p>
+      <p class="hero-tag">// 信号接入中 · SIGNAL ACQUIRED</p>
+      <h1 class="glitch" data-text="TIMHHTT">TIMHHTT</h1>
+      <p class="hero-sub-cn">欢迎来到霓虹深处</p>
+      <p class="hero-sub-en">NEON CITY <b>//</b> RIDE THE RAIN, CHASE THE LIGHT</p>
       <br>
-      <a class="enter-btn" href="projects.html">进入空间<span class="arrow">→</span></a>
+      <a class="enter-btn" href="profile.html">接入频道<span class="arrow">▸▸</span></a>
+    </div>
+
+    <div class="marquee-bar" aria-hidden="true">
+      <div class="marquee-inner">
+        <span>系统状态 <b>ONLINE</b></span><span>天气 <em>酸雨</em></span><span>霓虹指数 <em>爆表</em></span><span>信号 <b>稳定</b></span><span>频道 <b>TIMHHTT.FM</b></span><span>雨势 <em>增强中</em></span><span>电网负载 <b>61%</b></span><span>今日运势 <em>宜熬夜写代码</em></span>
+        <span>系统状态 <b>ONLINE</b></span><span>天气 <em>酸雨</em></span><span>霓虹指数 <em>爆表</em></span><span>信号 <b>稳定</b></span><span>频道 <b>TIMHHTT.FM</b></span><span>雨势 <em>增强中</em></span><span>电网负载 <b>61%</b></span><span>今日运势 <em>宜熬夜写代码</em></span>
+      </div>
     </div>
   </section>
 </main>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>画廊 · TIMHHTT</title>
+<meta name="description" content="TIMHHTT 的霓虹画廊。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect x='8' y='8' width='84' height='84' fill='%2307040e' stroke='%2300f0ff' stroke-width='5'/%3E%3Ctext x='50' y='68' font-size='52' text-anchor='middle' fill='%23ff2d95' font-family='monospace' font-weight='bold'%3ET%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<canvas id="bgCanvas" aria-hidden="true"></canvas>
+<div class="page-bg" aria-hidden="true"></div>
+
+<main class="page-main">
+  <header class="section page-hero reveal">
+    <p class="page-kicker">// NEON GALLERY · 光的收藏</p>
+    <h1 class="page-title">霓虹<span class="stroke">画廊</span></h1>
+    <p class="page-sub">这座城市最不值钱的是雨，最值钱的是光。</p>
+    <div class="divider-glow"></div>
+  </header>
+
+  <section class="section" style="padding-top:0; padding-bottom:4rem">
+    <div class="masonry" id="masonry"><!-- JS 渲染 --></div>
+  </section>
+</main>
+
+<script>
+/* ★ 如何添加图片：
+   1. 把图片放进 assets/img/ 目录（建议 JPG，宽 800px 以上）；
+   2. 在下面 GALLERY 数组里加一项 { src: "assets/img/文件名.jpg", caption: "说明" }。
+   图片高矮不限，瀑布流会自动排列。 */
+var GALLERY = [
+  { src: "assets/img/gallery-rooftop.jpg", caption: "天台 · 整座城市都在脚下发光" },
+  { src: "assets/img/gallery-alley.jpg", caption: "后巷 · 蒸汽与霓虹私奔的地方" },
+  { src: "assets/img/gallery-subway.jpg", caption: "末班车 · 驶入雾里的光轨" },
+  { src: "assets/img/gallery-market.jpg", caption: "夜市 · 最抚凡人心的赛博烟火" },
+  { src: "assets/img/hero-city.jpg", caption: "主街 · 雨夜的霓虹心脏" }
+];
+
+// 立即渲染，确保 main.js 的入场观察能捕获到元素
+(function () {
+  var box = document.getElementById("masonry");
+  if (!box) return;
+  box.innerHTML = GALLERY.map(function (g, i) {
+    return (
+      '<figure class="masonry-item reveal" style="--stagger:' + (i * 0.08) + 's">' +
+        '<img src="' + g.src + '" alt="' + (g.caption || "画廊图片") + '" loading="lazy">' +
+        (g.caption ? "<figcaption><b>◈</b> " + g.caption + "</figcaption>" : "") +
+      "</figure>"
+    );
+  }).join("");
+})();
+</script>
+<script src="js/main.js"></script>
+</body>
+</html>
